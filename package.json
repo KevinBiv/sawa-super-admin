@@ -41,7 +41,7 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-    "start": "node server",
+    "start": "react-scripts start",
     "dev": "npm run watch:css && react-scripts start",
     "build": "cross-env NODE_ENV=production npm run watch:css && react-scripts build",
     "test": "react-scripts test",

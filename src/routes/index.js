@@ -11,11 +11,15 @@ import {
 import Signin from "../pages/auth/SignIn";
 import SignUp from "../pages/auth/SignUp";
 import ServicesPreferences from "../components/registerSteps/ServicesPreferences";
-import Services from "../pages/Services";
-import People from "../pages/People";
-import Finances from "../pages/Finances";
+import Individuals from "../pages/Individuals";
+import Companies from "../pages/Companies";
+import Transactions from "../pages/Transactions";
 import RechargeSuccessful from "../components/finances/recharge/RechargeSuccessful";
 import RechargeFailed from "../components/finances/recharge/RechargeFailed";
+import Wallets from "../pages/Wallets";
+import Services from "../pages/Services";
+
+
 
 const routes = [
   {
@@ -41,21 +45,33 @@ const routes = [
           },
           {
             name: "My services page",
+            path: "/dashboard/individuals",
+            exact: true,
+            component: Individuals,
+          },
+          {
+            name: "Companies page",
+            path: "/dashboard/companies",
+            exact: true,
+            component: Companies,
+          },
+          {
+            name: "Transactions page",
+            path: "/dashboard/transactions",
+            exact: true,
+            component: Transactions,
+          },
+          {
+            name: "Wallets page",
+            path: "/dashboard/wallets",
+            exact: true,
+            component: Wallets,
+          },
+          {
+            name: "Services page",
             path: "/dashboard/services",
             exact: true,
             component: Services,
-          },
-          {
-            name: "People page",
-            path: "/dashboard/people",
-            exact: true,
-            component: People,
-          },
-          {
-            name: "Finance page",
-            path: "/dashboard/finances",
-            exact: true,
-            component: Finances,
           },
         ],
       },
@@ -77,14 +93,6 @@ const routes = [
 
         exact: true,
         component: ServicesPreferences,
-      },
-
-      {
-        name: "Sign up page",
-        path: "/signup",
-
-        exact: true,
-        component: SignUp,
       },
 
       {

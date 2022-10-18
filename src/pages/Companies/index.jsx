@@ -10,7 +10,10 @@ import TablePageFilter from "../../components/filters/TablePageFilter";
 import { generatePdfMembers } from "../../store/actions";
 import DeleteMember from "../../components/people/DeleteMember";
 import UpdateMember from "../../components/people/UpdateMember";
-function People() {
+
+import rba from "../../assets/images/image 10.png";
+
+function Companies() {
   const { people, isFetchingPeople } = useSelector(({ People }) => People);
   const [searchText, setSearchText] = useState(null);
   const [openAddMemberModal, setOpenAddMemberModal] = useState(false);
@@ -29,34 +32,13 @@ function People() {
     <div className="md:pt-14 pb-6 mx-6 sm:mx-10 space-y-6">
       <div className="flex justify-between items-center flex-wrap">
         <div>
-          <h5 className="text-2xl text-darkblue font-bold">My People</h5>
+          <h5 className="text-2xl text-darkblue font-bold">Companies</h5>
           <p className="text-sm text-lightergray font-semibold mt-1">
-            All members
+            Companies that uses sawa services
           </p>
         </div>
-        <div className="flex md:space-x-4 items-center flex-wrap ">
-          <p className="text-white py-2 px-3 bg-ligherdarkblue font-bold text-sm rounded-sm my-1 mx-2 md:mx-0 lg:my-0">
-            45 members
-          </p>
-          <button
-            onClick={() => setOpenAddMemberModal(true)}
-            className="text-white py-2 px-3 bg-ligherdarkblue opacity-80 hover:opacity-100 font-bold text-sm rounded-sm my-1 mx-2 md:mx-0 lg:my-0"
-          >
-            Add
-          </button>
-          <div className="my-1 mx-2 md:mx-0 lg:my-0">
-            <select className="bg-white rounded-sm relative block w-full px-3 py-2 placeholder-lightgray text-lightgray rounded-t-md focus:outline-none focus:ring-lightgreen focus:border-lightgreen focus:z-10 text-xs">
-              <option selected className="text-xs text-lightgray">
-                Department
-              </option>
-              <option className="text-xs text-lightgray" value="Marketing">
-                Marketing
-              </option>
-              <option className="text-xs text-lightgray" value="Production">
-                Production
-              </option>
-            </select>
-          </div>
+        <div className="flex md:space-x-4 items-center flex-wrap">
+          <button className="bg-ligherdarkblue text-white py-2 px-4 rounded">52 Companies</button>
           <NameFilter searchText={searchText} setSearchText={setSearchText} />
         </div>
       </div>
@@ -69,12 +51,13 @@ function People() {
           >
             <thead className="bg-darkblue rounded-2 ">
               <tr className="border-b-15 border-paleblue">
-                <td className="text-white text-sm py-4">ID</td>
-                <td className="text-white text-sm py-4">Full Names</td>
-                <td className="text-white text-sm py-4">Department </td>
-                <td className="text-white text-sm py-4">Age</td>
-                <td className="text-white text-sm py-4">Sex</td>
-                <td className="text-white text-sm py-4">Action</td>
+                <td className="text-white text-sm py-4">Company name</td>
+                <td className="text-white text-sm py-4">SawaID</td>
+                <td className="text-white text-sm py-4">Services used</td>
+                <td className="text-white text-sm py-4">Employees</td>
+                <td className="text-white text-sm py-4">Address</td>
+                <td className="text-white text-sm py-4">Phone</td>
+                <td className="text-white text-sm py-4">Email</td>
               </tr>
             </thead>
             <tbody className="bg-white rounded-2 border-r-15 border-white border-l-15 border-b-15">
@@ -95,42 +78,32 @@ function People() {
                   >
                     {/* <td className="font-bold text-xs  py-4 text-blue-500"> {(payment.created_at&&payment.created_at.substring(0, 10))??"-"}</td> */}
                     <td className="font-bold text-xs py-3 text-boldgray">
-                      00{person?.id}
+                      <div className="">
+                        <img src={rba} alt="" className="inline" />
+                        <p className="inline mx-2">RBA Rwanda</p>
+                      </div>
                     </td>
 
                     <td className="font-bold text-xs py-3 text-darkblue">
-                      {person?.full_names}
+                      <p>#Comp123</p>
                     </td>
                     <td className="font-bold text-xs py-3 text-boldgray">
-                      {person?.department}
+                      <p>2 services</p>
                     </td>
                     <td className="font-bold text-xs py-3 text-boldgray">
-                      {person?.age}
+                      <p>152 Employees</p>
                     </td>
 
                     <td className="font-bold text-xs py-3 text-boldgray">
-                      {person?.gender}
+                      <p>Kigali,Rwanda</p>
                     </td>
 
                     <td className="font-bold text-xs pt-3 text-darkblue w-52">
-                      <div className="flex space-x-2">
-                        <button
-                          onClick={() => {
-                            setOpenDeleteMemberModal(true);
-                          }}
-                          className=" text-sm  bg-red-500 opacity-90 hover:bg-red-600 text-white  rounded-sm py-1 px-3"
-                        >
-                          remove
-                        </button>
-                        <button
-                          onClick={() => {
-                            setOpenUpdateMemberModal(true);
-                          }}
-                          className=" text-sm bg-ligherdarkblue text-white opacity-80 hover:opacity-100 rounded-sm py-1 px-3"
-                        >
-                          update
-                        </button>
-                      </div>
+                      <p>+250 781 350 317</p>
+                    </td>
+
+                    <td className="font-bold text-xs pt-3 text-darkblue w-52">
+                      <p>Sulfo@sulforwanda.com</p>
                     </td>
                   </tr>
                 ))
@@ -230,4 +203,4 @@ function People() {
   );
 }
 
-export default People;
+export default Companies;

@@ -18,7 +18,7 @@ function LatestExpenses() {
     datePickerIsOpen: false,
   });
   return (
-    <div>
+    <div className="col-span-2">
       <h2 className="font-bold text-darkblue text-lg my-2">Latest Expenses</h2>
       <div className="grid grid-cols-1 lg:grid-cols-5 gap-2 ">
         {isFetchingIncomesStatistics ? (

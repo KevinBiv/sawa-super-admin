@@ -4,19 +4,21 @@ import topCircle2 from "../../assets/images/topcircle2.png";
 import bottomDots from "../../assets/images/bottom dots.png";
 import carImg from "../../assets/images/car 1.png";
 import circleImg from "../../assets/images/circleImg.png";
+
+import person from "../../assets/images/Group 63.png";
+import topDots from "../../assets/images/dots 3.png";
+
 function Banner() {
   return (
-    <div className="register bg-ligherdarkblue relative  justify-center items-center hidden md:flex overflow-hidden">
-      <img src={topCircle1} alt="Icon" className="absolute top-0 left-0 w-20" />
-      <img
-        src={topCircle2}
+    <div className="register bg-darkblue relative  justify-center items-center hidden md:flex overflow-hidden">
+      {/* <img
+        src={topDots}
         alt="Icon"
-        className="absolute w-32 top-16 left-9"
-      />
+        className="absolute top-full right-full"
+      /> */}
 
       <div className="w-1/2  relative flex justify-center items-center ">
-        <img src={circleImg} alt="Icon" className="relative " />
-        <img src={carImg} alt="Car Icon" className="absolute left-4" />
+        <img src={person} alt="Car Icon" className="absolute left-4" />
       </div>
 
       <img

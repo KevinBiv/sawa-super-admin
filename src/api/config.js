@@ -14,6 +14,8 @@ if (user)
   axiosInstance.defaults.headers.common["Authorization"] =
     "Bearer " + user.token;
 
+
+
 axiosInstance.interceptors.response.use(
   (res) => res.data,
   (err) => {

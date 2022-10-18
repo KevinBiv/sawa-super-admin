@@ -17,9 +17,9 @@ function Signin() {
       <Banner />
       <div className="bg-darkwhite flex flex-col justify-center items-center py-10 px-10">
         <div className="max-w-md w-full space-y-8">
-          <div className="flex flex-col justify-center items-center">
-            <img src={Logo} alt="logo" className="w-2/5" />
-            <h2 className="text-2xl mt-8 text-darkblue font-bold">Sign In</h2>
+          <div className="">
+            <h2 className="text-4xl mt-4 text-darkblue font-bold">Login</h2>
+            <p className="text-lg text-darkblue">Welcome back admin</p>
           </div>
           <form
             className="mt-8 space-y-6"
@@ -29,7 +29,7 @@ function Signin() {
             <input type="hidden" name="remember" defaultValue="true" />
             <div className="space-y-3">
               <div>
-                <label htmlFor="email-address" className="sr-only">
+                <label htmlFor="email-address" className="text-base font-medium">
                   Email address
                 </label>
                 <input
@@ -49,19 +49,21 @@ function Signin() {
                 ) : null}
               </div>
               <div className="flex items-center bg-white">
-                <label htmlFor="password" className="sr-only">
-                  Password
-                </label>
-                <input
-                  id="password"
-                  name="password"
-                  type={showPassword ? "text" : "password"}
-                  autoComplete="current-password"
-                  required
-                  onChange={(e) => setPassword(e.target.value)}
-                  className="flex-1 bg-white appearance-none rounded-none relative block w-full px-3 py-2 placeholder-darkblue text-gray-900 rounded-b-md focus:outline-none focus:ring-lightgreen focus:border-lightgreen focus:z-10 sm:text-sm"
-                  placeholder="Enter password"
-                />
+                <div>
+                  <label htmlFor="password" className="text-base font-medium">
+                    Password
+                  </label>
+                  <input
+                    id="password"
+                    name="password"
+                    type={showPassword ? "text" : "password"}
+                    autoComplete="current-password"
+                    required
+                    onChange={(e) => setPassword(e.target.value)}
+                    className="flex-1 bg-white appearance-none rounded-none relative block w-full px-3 py-2 placeholder-darkblue text-gray-900 rounded-b-md focus:outline-none focus:ring-lightgreen focus:border-lightgreen focus:z-10 sm:text-sm"
+                    placeholder="Enter password"
+                  />
+                </div>
 
                 <IoMdEyeOff
                   role="button"
@@ -101,12 +103,6 @@ function Signin() {
               </button>
             </div>
           </form>
-          <div className="flex space-x-2 text-sm justify-center pt-10">
-            <p>Not a Member? </p>
-            <Link to="/signup" className="text-ligherdarkblue">
-              Register Now
-            </Link>
-          </div>
         </div>
       </div>
     </div>

@@ -18,56 +18,56 @@ function UpdateMember({ handleClose }) {
       </div>
       <form className="space-y-2">
         <div className="flex items-center bg-white pl-3 rounded-1">
-          <label htmlFor="employee_name" className="sr-only">
-            Employee Name
+          <label htmlFor="username" className="sr-only">
+            Username
           </label>
           <input
             type="text"
             name="employee_name"
-            id="employee_name"
+            id="username"
             autoComplete="employee_name"
             className="flex-1 appearance-none rounded-none relative block w-full px-3 py-3 placeholder-lightgray text-lightgray rounded-b-md focus:outline-none focus:ring-darkblue focus:border-darkblue focus:z-10 sm:text-xs"
-            placeholder="Employee Name"
+            placeholder="Username"
           />
         </div>
         <div className="flex items-center bg-white pl-3 rounded-1">
-          <label htmlFor="age" className="sr-only">
-            Age
+          <label htmlFor="sawa_id" className="sr-only">
+            SawaID
           </label>
           <input
             type="text"
             name="age"
-            id="age"
+            id="sawa_id"
             autoComplete="age"
             className="flex-1 appearance-none rounded-none relative block w-full px-3 py-3 placeholder-lightgray text-lightgray rounded-b-md focus:outline-none focus:ring-darkblue focus:border-darkblue focus:z-10 sm:text-xs"
-            placeholder="Age"
+            placeholder="SawaID"
           />
         </div>
         <div className=" bg-white  rounded-1 ">
-          <label htmlFor="sex" className="sr-only">
-            sex
+          <label htmlFor="services" className="sr-only">
+            Services Used
           </label>
           <Select
             className="text-xs text-lightgray w-100 focus:outline-none focus:ring-darkblue focus:border-darkblue focus:z-10"
             defaultValue={selectedOption}
             onChange={setSelectedOption}
             options={genderOptions}
-            id="sex"
+            id="services"
             isSearchable={true}
-            placeholder="sex"
+            placeholder="Services Used"
           />
         </div>
         <div className="flex items-center bg-white pl-3 rounded-1">
-          <label htmlFor="sawa_id" className="sr-only">
-            Sawa ID
+          <label htmlFor="verification" className="sr-only">
+            Verification Status
           </label>
           <input
             type="text"
             name="sawa_id"
-            id="sawa_id"
+            id="verification"
             autoComplete="sawa_id"
             className="flex-1 appearance-none rounded-none relative block w-full px-3 py-3 placeholder-lightgray text-lightgray rounded-b-md focus:outline-none focus:ring-darkblue focus:border-darkblue focus:z-10 sm:text-xs"
-            placeholder="Sawa ID"
+            placeholder="Verification Status"
           />
         </div>
         <button

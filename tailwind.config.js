@@ -38,6 +38,7 @@ module.exports = {
       paleblue: "#F1F5FF",
       paleindigo: "#E6EDFE",
       lightgreen: "#34BEB9",
+      imagegray: "rgba(142, 154, 173, 0.05)"
     },
     spacing: {
       px: "1px",
@@ -265,6 +266,7 @@ module.exports = {
     flexGrow: {
       0: "0",
       DEFAULT: "1",
+      2: '2'
     },
     flexShrink: {
       0: "0",
@@ -307,6 +309,8 @@ module.exports = {
       ],
     },
     fontSize: {
+      xxxs: ["0.375rem", { lineHeight: "0.5rem" }],
+      xxs:["0.625rem", { lineHeight: "0.75rem" }],
       xs: ["0.75rem", { lineHeight: "1rem" }],
       sm: ["0.875rem", { lineHeight: "1.25rem" }],
       base: ["1rem", { lineHeight: "1.5rem" }],
@@ -438,6 +442,7 @@ module.exports = {
       10: "repeat(10, minmax(0, 1fr))",
       11: "repeat(11, minmax(0, 1fr))",
       12: "repeat(12, minmax(0, 1fr))",
+      13: "200px minmax(900px, 1fr) 100px",
     },
     gridTemplateRows: {
       none: "none",
